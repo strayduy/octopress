@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | strayharbor]]></title>
+  <link href="http://www.strayharbor.com/blog/tags/octopress/atom.xml" rel="self"/>
+  <link href="http://www.strayharbor.com/"/>
+  <updated>2013-07-28T18:04:32-07:00</updated>
+  <id>http://www.strayharbor.com/</id>
+  <author>
+    <name><![CDATA[Duy Tran]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[New Year, New Look]]></title>
+    <link href="http://www.strayharbor.com/blog/2013/01/07/new-year-new-look/"/>
+    <updated>2013-01-07T20:00:00-08:00</updated>
+    <id>http://www.strayharbor.com/blog/2013/01/07/new-year-new-look</id>
+    <content type="html"><![CDATA[<p>Ringing in 2013, I&rsquo;ve migrated my little blog onto <a href="http://octopress.org/">Octopress</a>.</p>
+
+<p>Theme: <a href="https://github.com/bijumon/oct2">oct2</a></p>
+]]></content>
+  </entry>
+  
+</feed>

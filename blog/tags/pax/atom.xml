@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: pax | strayharbor]]></title>
+  <link href="http://www.strayharbor.com/blog/tags/pax/atom.xml" rel="self"/>
+  <link href="http://www.strayharbor.com/"/>
+  <updated>2013-07-28T18:04:32-07:00</updated>
+  <id>http://www.strayharbor.com/</id>
+  <author>
+    <name><![CDATA[Duy Tran]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[PAX Prime 2012]]></title>
+    <link href="http://www.strayharbor.com/blog/2012/09/04/pax-prime-2012/"/>
+    <updated>2012-09-04T00:00:00-07:00</updated>
+    <id>http://www.strayharbor.com/blog/2012/09/04/pax-prime-2012</id>
+    <content type="html"><![CDATA[<p><a href="http://imgur.com/BHUjB"><img src="http://i.imgur.com/BHUjBl.jpg" width="640" height="478" title="Welcome home" alt="Welcome home" /></a></p>
+]]></content>
+  </entry>
+  
+</feed>

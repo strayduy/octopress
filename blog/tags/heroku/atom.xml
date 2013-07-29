@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: heroku | strayharbor]]></title>
+  <link href="http://www.strayharbor.com/blog/tags/heroku/atom.xml" rel="self"/>
+  <link href="http://www.strayharbor.com/"/>
+  <updated>2013-07-28T18:04:32-07:00</updated>
+  <id>http://www.strayharbor.com/</id>
+  <author>
+    <name><![CDATA[Duy Tran]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hosted on Heroku]]></title>
+    <link href="http://www.strayharbor.com/blog/2012/08/26/hosted-on-heroku/"/>
+    <updated>2012-08-26T00:00:00-07:00</updated>
+    <id>http://www.strayharbor.com/blog/2012/08/26/hosted-on-heroku</id>
+    <content type="html"><![CDATA[<p>This blog is hosted on <a href="http://www.heroku.com/">Heroku</a>, a cloud application platform.</p>
+
+<h3>Platform as a Service</h3>
+
+<p>Heroku, like <a href="https://developers.google.com/appengine/">other</a> <a href="https://openshift.redhat.com/app/">cloud platforms</a>, employs a hosting model known as <a href="http://www.salesforce.com/paas/">Platform as a Service (PaaS)</a>. Instead of providing you with raw servers that you would otherwise have to configure yourself, these platforms manage the underlying application environment for you. All you have to worry about is building the application itself.</p>
+
+<p>For those of us not interested or qualified to play <a href="http://en.wikipedia.org/wiki/System_administrator">sysadmin</a>, the PaaS model spares you the responsibility of having to configure an entire web stack or maintain a server cluster. You can focus on what I consider to be the fun part: writing application code.</p>
+
+<h3>A Few Neat Things About Heroku</h3>
+
+<h4>Basic usage is free</h4>
+
+<p><a href="https://heroku.com/pricing">Heroku&rsquo;s pricing model</a> is based on the computation-hours that your application consumes. You allocate one or more <a href="https://devcenter.heroku.com/articles/dynos">dynos</a> (process containers) to execute your code, with additional dynos providing more concurrency at a proportional cost.</p>
+
+<p>Heroku spots you a <a href="https://devcenter.heroku.com/categories/billing">free dyno</a>, though. This is probably enough processing power for most low-traffic sites.</p>
+
+<h4>Scaling is (probably) easy</h4>
+
+<p>If you find yourself in the enviable position of requiring more horsepower than the freebie dyno can provide, you can allocate more dynos for your application with <a href="https://devcenter.heroku.com/articles/scaling#scaling">a single command</a>:</p>
+
+<p>``` bash</p>
+
+<h1>Allocate two web dynos</h1>
+
+<p>heroku ps:scale web=2</p>
+
+<h1>Allocate two <em>additional</em> web dynos</h1>
+
+<p>heroku ps:scale web+2
+```</p>
+
+<p>Disclaimer: I haven&rsquo;t had the need to scale beyond my one dyno, so I&rsquo;m just going off of <a href="https://devcenter.heroku.com/articles/scaling">Heroku&rsquo;s documentation</a> here.</p>
+
+<h4>Deployment is definitely easy</h4>
+
+<p>Heroku <a href="https://devcenter.heroku.com/articles/git">stores your application code in a remote git repository</a>. To deploy changes into production, you simply push commits to that repo.</p>
+
+<p>As an example, <a href="https://github.com/strayduy/strayharbor-blog/commit/9a366e46cb5ba9909d66bc1393d572d6a537b890">here&rsquo;s how I posted this entry to the site</a>: <!-- Pretty meta, right? --></p>
+
+<p><code>bash
+git add _posts/2012-08-26-hosted-on-heroku.md
+git commit -m "New post about hosting the site on Heroku"
+git push heroku master
+</code></p>
+
+<p>And if you&rsquo;re already using <a href="http://git-scm.com/">git for version control</a>, then there&rsquo;s not much overhead to deploying to Heroku, following the initial setup.</p>
+
+<h4>Language options</h4>
+
+<p>Heroku supports <a href="https://devcenter.heroku.com/articles/cedar#polyglot-platform">a bunch of languages</a>, like <a href="http://devcenter.heroku.com/articles/ruby">Ruby</a>, <a href="http://devcenter.heroku.com/articles/python">Python</a>, and <a href="http://devcenter.heroku.com/articles/java">Java</a>, as well as frameworks like <a href="http://devcenter.heroku.com/articles/rails3">Rails</a>, <a href="http://devcenter.heroku.com/articles/django">Django</a>, and <a href="http://devcenter.heroku.com/articles/nodejs">Node</a>.</p>
+
+<h3>Deploying Jekyll to Heroku</h3>
+
+<p>I discussed <a href="https://github.com/mojombo/jekyll/">Jekyll</a> in my <a href="/2012/08/15/generated-by-jekyll/">previous post</a>. Here are two guides for deploying a Jekyll site to Heroku:</p>
+
+<ul>
+<li><a href="http://mwmanning.com/2011/11/29/Run-Your-Jekyll-Site-On-Heroku.html">Run Your Jekyll Site On Heroku</a></li>
+<li><a href="http://mikemayo.org/2012/deploying-jekyll-sites-to-heroku-with-rack-jekyll/">Deploying Jekyll sites to Heroku with Rack-Jekyll</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[strayharbor]]></title>
+  <link href="http://www.strayharbor.com/atom.xml" rel="self"/>
+  <link href="http://www.strayharbor.com/"/>
+  <updated>2013-07-28T18:04:32-07:00</updated>
+  <id>http://www.strayharbor.com/</id>
+  <author>
+    <name><![CDATA[Duy Tran]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[New Year, New Look]]></title>
+    <link href="http://www.strayharbor.com/blog/2013/01/07/new-year-new-look/"/>
+    <updated>2013-01-07T20:00:00-08:00</updated>
+    <id>http://www.strayharbor.com/blog/2013/01/07/new-year-new-look</id>
+    <content type="html"><![CDATA[<p>Ringing in 2013, I&rsquo;ve migrated my little blog onto <a href="http://octopress.org/">Octopress</a>.</p>
+
+<p>Theme: <a href="https://github.com/bijumon/oct2">oct2</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PAX Prime 2012]]></title>
+    <link href="http://www.strayharbor.com/blog/2012/09/04/pax-prime-2012/"/>
+    <updated>2012-09-04T00:00:00-07:00</updated>
+    <id>http://www.strayharbor.com/blog/2012/09/04/pax-prime-2012</id>
+    <content type="html"><![CDATA[<p><a href="http://imgur.com/BHUjB"><img src="http://i.imgur.com/BHUjBl.jpg" width="640" height="478" title="Welcome home" alt="Welcome home" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[27]]></title>
+    <link href="http://www.strayharbor.com/blog/2012/08/28/twenty-seven/"/>
+    <updated>2012-08-28T00:00:00-07:00</updated>
+    <id>http://www.strayharbor.com/blog/2012/08/28/twenty-seven</id>
+    <content type="html"><![CDATA[<p><a href="http://imgur.com/D6GCs"><img src="http://i.imgur.com/D6GCsl.jpg" width="640" height="478" title="A slice of birthday cake" alt="A slice of birthday cake" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hosted on Heroku]]></title>
+    <link href="http://www.strayharbor.com/blog/2012/08/26/hosted-on-heroku/"/>
+    <updated>2012-08-26T00:00:00-07:00</updated>
+    <id>http://www.strayharbor.com/blog/2012/08/26/hosted-on-heroku</id>
+    <content type="html"><![CDATA[<p>This blog is hosted on <a href="http://www.heroku.com/">Heroku</a>, a cloud application platform.</p>
+
+<h3>Platform as a Service</h3>
+
+<p>Heroku, like <a href="https://developers.google.com/appengine/">other</a> <a href="https://openshift.redhat.com/app/">cloud platforms</a>, employs a hosting model known as <a href="http://www.salesforce.com/paas/">Platform as a Service (PaaS)</a>. Instead of providing you with raw servers that you would otherwise have to configure yourself, these platforms manage the underlying application environment for you. All you have to worry about is building the application itself.</p>
+
+<p>For those of us not interested or qualified to play <a href="http://en.wikipedia.org/wiki/System_administrator">sysadmin</a>, the PaaS model spares you the responsibility of having to configure an entire web stack or maintain a server cluster. You can focus on what I consider to be the fun part: writing application code.</p>
+
+<h3>A Few Neat Things About Heroku</h3>
+
+<h4>Basic usage is free</h4>
+
+<p><a href="https://heroku.com/pricing">Heroku&rsquo;s pricing model</a> is based on the computation-hours that your application consumes. You allocate one or more <a href="https://devcenter.heroku.com/articles/dynos">dynos</a> (process containers) to execute your code, with additional dynos providing more concurrency at a proportional cost.</p>
+
+<p>Heroku spots you a <a href="https://devcenter.heroku.com/categories/billing">free dyno</a>, though. This is probably enough processing power for most low-traffic sites.</p>
+
+<h4>Scaling is (probably) easy</h4>
+
+<p>If you find yourself in the enviable position of requiring more horsepower than the freebie dyno can provide, you can allocate more dynos for your application with <a href="https://devcenter.heroku.com/articles/scaling#scaling">a single command</a>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># Allocate two web dynos</span>
+</span><span class='line'>heroku ps:scale <span class="nv">web</span><span class="o">=</span>2
+</span><span class='line'>
+</span><span class='line'><span class="c"># Allocate two *additional* web dynos</span>
+</span><span class='line'>heroku ps:scale web+2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Disclaimer: I haven&rsquo;t had the need to scale beyond my one dyno, so I&rsquo;m just going off of <a href="https://devcenter.heroku.com/articles/scaling">Heroku&rsquo;s documentation</a> here.</p>
+
+<h4>Deployment is definitely easy</h4>
+
+<p>Heroku <a href="https://devcenter.heroku.com/articles/git">stores your application code in a remote git repository</a>. To deploy changes into production, you simply push commits to that repo.</p>
+
+<p>As an example, <a href="https://github.com/strayduy/strayharbor-blog/commit/9a366e46cb5ba9909d66bc1393d572d6a537b890">here&rsquo;s how I posted this entry to the site</a>: <!-- Pretty meta, right? --></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add _posts/2012-08-26-hosted-on-heroku.md
+</span><span class='line'>git commit -m <span class="s2">&quot;New post about hosting the site on Heroku&quot;</span>
+</span><span class='line'>git push heroku master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And if you&rsquo;re already using <a href="http://git-scm.com/">git for version control</a>, then there&rsquo;s not much overhead to deploying to Heroku, following the initial setup.</p>
+
+<h4>Language options</h4>
+
+<p>Heroku supports <a href="https://devcenter.heroku.com/articles/cedar#polyglot-platform">a bunch of languages</a>, like <a href="http://devcenter.heroku.com/articles/ruby">Ruby</a>, <a href="http://devcenter.heroku.com/articles/python">Python</a>, and <a href="http://devcenter.heroku.com/articles/java">Java</a>, as well as frameworks like <a href="http://devcenter.heroku.com/articles/rails3">Rails</a>, <a href="http://devcenter.heroku.com/articles/django">Django</a>, and <a href="http://devcenter.heroku.com/articles/nodejs">Node</a>.</p>
+
+<h3>Deploying Jekyll to Heroku</h3>
+
+<p>I discussed <a href="https://github.com/mojombo/jekyll/">Jekyll</a> in my <a href="http://www.strayharbor.com/2012/08/15/generated-by-jekyll/">previous post</a>. Here are two guides for deploying a Jekyll site to Heroku:</p>
+
+<ul>
+<li><a href="http://mwmanning.com/2011/11/29/Run-Your-Jekyll-Site-On-Heroku.html">Run Your Jekyll Site On Heroku</a></li>
+<li><a href="http://mikemayo.org/2012/deploying-jekyll-sites-to-heroku-with-rack-jekyll/">Deploying Jekyll sites to Heroku with Rack-Jekyll</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Generated by Jekyll]]></title>
+    <link href="http://www.strayharbor.com/blog/2012/08/15/generated-by-jekyll/"/>
+    <updated>2012-08-15T00:00:00-07:00</updated>
+    <id>http://www.strayharbor.com/blog/2012/08/15/generated-by-jekyll</id>
+    <content type="html"><![CDATA[<p>The site you&rsquo;re looking at was generated by a static blog engine named <a href="https://github.com/mojombo/jekyll/">Jekyll</a>.</p>
+
+<h3>Dynamic vs Static Content</h3>
+
+<p>When you visit a blog powered by <a href="http://wordpress.org/">Wordpress</a> or <a href="http://www.blogger.com/">Blogger</a>, the pages you see are dynamically generated. The content of each post is stored in some backend data store, and at the time of request, the web server fetches that content and renders the page into HTML.</p>
+
+<p>Static sites are different in that they don&rsquo;t construct web pages on the fly. The pages are created ahead of time and stored on the server in an already-rendered state. When you request static content, the server simply sends you a pre-existing file.</p>
+
+<h3>Static Site Generators</h3>
+
+<p>Static site generators incorporate a rendering component typical of dynamic web pages, but they construct all of the site&rsquo;s content in one shot. In the case of Jekyll, your posts are retrieved from regular files and converted into formatted HTML pages. Jekyll will take care of linking all your posts together. Once generated, you can then upload your entire site structure to your web host of choice.</p>
+
+<p>The downside of this approach is that users will have a limited ability to interact with your site, since it&rsquo;ll essentially be read-only. They might not be able to do things like sign in or post comments. (At least not directly.)</p>
+
+<h3>Why Go Static</h3>
+
+<p>For me, I just wanted a simple blogging solution. I&rsquo;ll happily give up the bells and whistles of fancier blogging engines for the ability to write blog posts offline in an ordinary text editor<!-- vim represent -->.</p>
+
+<p>And as someone who writes code for a living, I&rsquo;m way more comfortable managing my blog content through a <a href="http://git-scm.com/">version control system</a> rather than through some graphical admin interface.</p>
+
+<h3>Jekyll, and the Bootstrapping Thereof</h3>
+
+<p>Jekyll was the first and only static site generator I&rsquo;ve tried, so I can&rsquo;t comment on how it compares to <a href="http://ringce.com/hyde">some</a> <a href="http://pelican.notmyidea.org/en/2.8/index.html">of the</a> <a href="http://cloudhead.io/toto">others</a>. What I can tell you is that it has <a href="https://github.com/mojombo/jekyll/wiki">solid documentation</a>, an <a href="https://github.com/mojombo/jekyll/pulls">active community</a>, and an easy learning curve.</p>
+
+<p><a href="http://jekyllbootstrap.com/">Jekyll-Bootstrap</a> is also a handy resource for diving into Jekyll. Their skeleton site structure is a good starting point, and you can customize the look of your blog with one of their <a href="http://themes.jekyllbootstrap.com/">half dozen themes</a>.</p>
+
+<h3>Related Links</h3>
+
+<ul>
+<li><a href="http://www.webmaster-source.com/2012/05/09/full-circle-the-return-of-static-blog-generators/">Full Circle: The Return of Static Blog Generators</a></li>
+<li><a href="http://jekyllbootstrap.com/lessons/jekyll-introduction.html">Jekyll Introduction</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[And We're Live]]></title>
+    <link href="http://www.strayharbor.com/blog/2012/07/14/and-were-live/"/>
+    <updated>2012-07-14T00:00:00-07:00</updated>
+    <id>http://www.strayharbor.com/blog/2012/07/14/and-were-live</id>
+    <content type="html"><![CDATA[<p>Greetings, Internet.</p>
+]]></content>
+  </entry>
+  
+</feed>
