@@ -1,9 +1,0 @@
----
-layout: post
-title: "PAX Prime 2012"
-date: 2012-09-04 00:00
-comments: true
-categories: pax
----
-
-<a href="http://imgur.com/BHUjB"><img src="http://i.imgur.com/BHUjBl.jpg" width="640" height="478" title="Welcome home" alt="Welcome home" /></a>
